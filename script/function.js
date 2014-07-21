@@ -16,6 +16,17 @@
 				// itemsMobile : false
 
 			});
+			
+			$("#student").owlCarousel({
+				navigation : true, // Show next and prev buttons
+				navigationText: ['&nbsp;','&nbsp;'],
+				items: 3
+			});
+			$("#performance").owlCarousel({
+				navigation : true, // Show next and prev buttons
+				navigationText: ['&nbsp;','&nbsp;'],
+				items: 4
+			});
 		});
 	});
 })(jQuery);
