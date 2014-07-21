@@ -1,6 +1,8 @@
 (function($) {
 	$(function() {
 		$(document).ready(function() {
+			$(window).smoothScroll();
+			
 			$("#banner").owlCarousel({
 
 				navigation : true, // Show next and prev buttons
@@ -27,6 +29,9 @@
 				navigationText: ['&nbsp;','&nbsp;'],
 				items: 4
 			});
+			
+				
+			
 		});
 	});
 })(jQuery);

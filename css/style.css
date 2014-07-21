@@ -372,6 +372,7 @@ body {
 }
 .performance-wrap .item {
   padding: 5px;
+  cursor: pointer;
 }
 .performance-wrap .item .head {
   border: 1px solid #ccc;
@@ -431,8 +432,16 @@ body {
   border-top: none;
   border-radius: 0 0 250px 250px ;
   min-height: 125px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .performance-wrap .item:hover .head img,
 .performance-wrap .item:active .head img {
   border-color: #8f002f;
+}
+.performance-wrap .item:hover .foot,
+.performance-wrap .item:active .foot {
+  border-radius: 0;
+  border-bottom-color: #fff;
 }

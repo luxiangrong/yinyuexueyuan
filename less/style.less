@@ -114,6 +114,7 @@ body {
   }
   .item {
     padding: 5px;
+    cursor: pointer;
     .head {
       border: 1px solid #ccc;
       background-color: #fff;
@@ -172,6 +173,7 @@ body {
       border-top: none;
       border-radius: 0 0 250px 250px ;
       min-height: 125px;
+      .transition(all 0.5s) ;
     }
     &:hover,
     &:active {
@@ -179,6 +181,10 @@ body {
         img {
           border-color: #8f002f;
         }
+       }
+       .foot {
+         border-radius: 0;
+         border-bottom-color: #fff;
        }
     }
   }
