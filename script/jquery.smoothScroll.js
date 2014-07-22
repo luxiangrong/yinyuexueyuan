@@ -95,7 +95,7 @@
 		var start = 0, during = options.during, current = new Date().getTime(); 
 		var _run = function(){
 			start = new Date().getTime() - current;
-			var newTop = Tween.Quint.easeOut(start, oldScrollTop, distance, during);
+			var newTop = Tween.Cubic.easeOut(start, oldScrollTop, distance, during);
 			$obj.scrollTop(newTop);
 			if (start < during) {
          		requestAnimationId = requestAnimationFrame(_run);

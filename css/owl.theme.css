@@ -6,7 +6,6 @@
 .owl-theme .owl-controls{
 	margin-top: -50px;
 	text-align: center;
-	transform: translate3d(0px, 0px, 0px);
 	position: absolute;
 	width: 100%;
 }
