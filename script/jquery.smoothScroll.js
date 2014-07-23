@@ -32,7 +32,7 @@
 */
 (function ($) {
 	var defaults = {
-		step: 120,				//每次滚轮事件，页面滚动的距离
+		step: 80,				//每次滚轮事件，页面滚动的距离
 		during: 600,
 		preventDefault: true,
 		stopPropagation: true

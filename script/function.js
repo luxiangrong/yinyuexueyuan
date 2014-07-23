@@ -52,8 +52,8 @@
 
 				});
 			});
-
 		}
+		
 	};
 
 	var $window = $(window);
@@ -64,38 +64,58 @@
 		}
 	};
 
-	$(document).ready(onReady.init);
+	//stellar计算高度的时候有bug，这里还需要改进
+	//$(document).ready(onReady.init);
 
 	$(function() {
 		$(document).ready(function() {
 			$(window).smoothScroll();
 
+			var owlCarouselInit = false;
+
 			$("#banner").owlCarousel({
-
-				navigation : true, // Show next and prev buttons
-				navigationText : ['&nbsp;', '&nbsp;'],
+				navigation : false, // Show next and prev buttons
 				singleItem : true,
-				transitionStyle : "fade"
-
-				// "singleItem:true" is a shortcut for:
-				// items : 1,
-				// itemsDesktop : false,
-				// itemsDesktopSmall : false,
-				// itemsTablet: false,
-				// itemsMobile : false
-
+				transitionStyle : "fade",
+				autoPlay: true,
+				beforeInit: function(){owlCarouselInit=false},
+				afterInit: function(){sudden.init();owlCarouselInit=true},
 			});
 
 			$("#student").owlCarousel({
 				navigation : true, // Show next and prev buttons
 				navigationText : ['&nbsp;', '&nbsp;'],
-				items : 3
+				items : 3,
+				beforeInit: function(){owlCarouselInit=false},
+				afterInit: function(){owlCarouselInit=true},
 			});
+			
 			$("#performance").owlCarousel({
 				navigation : true, // Show next and prev buttons
 				navigationText : ['&nbsp;', '&nbsp;'],
-				items : 4
+				items : 4,
+				beforeInit: function(){owlCarouselInit=false},
+				afterInit: function(){
+					owlCarouselInit=true,
+					$(this).find('.foot').width();
+				},
 			});
+			
+			
+			function initStellar(){
+				if(owlCarouselInit) {
+					$.stellar({
+						hideDistantElements: true
+					});
+					return;
+				}
+			}
+			var id = window.setTimeout(function(){
+				initStellar();
+				clearTimeout(id);
+				id = window.setTimeout(initStellar, 100);
+			}, 100);
+			
 
 		});
 	});

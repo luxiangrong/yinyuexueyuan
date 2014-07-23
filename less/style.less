@@ -108,6 +108,8 @@ body {
 
 .performance-wrap {
   margin-top: 100px;
+  height: 600px;
+  overflow:hidden;
   background: url(../images/performance_bg.png) repeat-x left -210px;
   h2 {
     font-size: 24px;
@@ -115,9 +117,12 @@ body {
     color: #333;
     font-weight: normal;
   }
+  .owl-item {
+  }
   .item {
     padding: 5px;
     cursor: pointer;
+    margin-bottom: 200px;
     .head {
       border: 1px solid #ccc;
       background-color: #fff;
@@ -133,7 +138,6 @@ body {
     .body {
       padding: 1px 15px;
       background-color: #fff;
-      border: 1px solid #ccc;
       border-top: none;
       border-bottom: none;
       h3 {
@@ -171,8 +175,9 @@ body {
       }
     }
     .foot {
+      width: 100%;
+      height: 100px;
       background-color: #fff;
-      border: 1px solid #ccc;
       border-top: none;
       border-radius: 0 0 250px 250px ;
       min-height: 125px;
@@ -189,6 +194,7 @@ body {
        .foot {
          border-radius: 0;
          border-bottom-color: #fff;
+         height: 220px;
        }
     }
   }
@@ -255,6 +261,7 @@ body {
   border: 1px solid #ddd;
   text-decoration: none;
   position: relative;
+  padding-left: 80px;
   &:hover {
     background-color: #8f002f;
     color: #fff;
@@ -276,7 +283,7 @@ body {
 
 .achievement-wrap {
   background: url(../images/achievement_bg_01.jpg) no-repeat;
-  background-size: 100%;
+  background-attachment: fixed;
   padding: 200px 0;
   position: relative;
   .mask {
@@ -383,4 +390,10 @@ body {
     }
   }
   
+}
+
+.music-container {
+  img {
+    position: fixed;
+  }
 }

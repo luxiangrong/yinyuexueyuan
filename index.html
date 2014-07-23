@@ -22,7 +22,7 @@
 		</script>
 		<![endif]-->
 	</head>
-	<body>
+	<body stellar-offset-parent="true">
 		<div class="header">
 			<div class="container">
 				<a class="logo" href="#"> <img src="images/logo.png" /> </a>
@@ -56,6 +56,16 @@
 			</div>
 			<div class="item"><img src="images/banner_02.jpg" alt="">
 			</div>
+		</div>
+		<div class="music-container">
+			<img src="images/music_01.png" data-stellar-ratio="3" data-stellar-vertical-offset="-150"style="left: 10%"/>
+			<img src="images/music_02.png" data-stellar-ratio="2" data-stellar-vertical-offset="50"style="left: 20%"/>
+			<img src="images/music_03.png" data-stellar-ratio="1.25" data-stellar-vertical-offset="250"style="left: 30%"/>
+			<img src="images/music_04.png" data-stellar-ratio="2.5" data-stellar-vertical-offset="-50"style="left: 45%"/>
+			<img src="images/music_05.png" data-stellar-ratio="3.65" data-stellar-vertical-offset="-150"style="left: 40%"/>
+			<img src="images/music_06.png" data-stellar-ratio="2.45" data-stellar-vertical-offset="-150"style="left: 60%"/>
+			<img src="images/music_07.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="250"style="left: 70%"/>
+			<img src="images/music_08.png" data-stellar-ratio="2.05" data-stellar-vertical-offset="0"style="left: 90%"/>
 		</div>
 		<div class="container student-wrap">
 			<div id="student" class="owl-carousel owl-theme">
@@ -153,7 +163,9 @@
 								<i class="icon icon-address"></i>地点：中央音乐学院演奏厅
 							</p>
 						</div>
-						<div class="foot"></div>
+						<div class="foot-wrap" style="width: 100%:">
+							<div class="foot"></div>
+						</div>
 					</div>
 					<div class="item">
 						<div class="head">
@@ -214,8 +226,9 @@
 			</div>
 		</div>
 
-		<div class="achievement-wrap">
-			<div class="mask"></div>
+		<div class="achievement-wrap" data-stellar-background-ratio="0.5">
+			<div class="mask" style="overflow: hidden;">
+			</div>
 			<div class="container-wrap">
 				<div class="container">
 					<div class="left-col">
@@ -277,11 +290,15 @@
 					<div class="col-3">
 						<div class="qr">
 							<a href="#"><img src="images/qr_01.jpg" /></a>
-							<p>微信公众号</p>
+							<p>
+								微信公众号
+							</p>
 						</div>
 						<div class="qr">
 							<a href="#"><img src="images/qr_01.jpg" /></a>
-							<p>新浪微博</p>
+							<p>
+								新浪微博
+							</p>
 						</div>
 					</div>
 				</div>
@@ -289,6 +306,7 @@
 		</div>
 		<script type="text/javascript" src="script/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="script/imagesloaded.pkgd.min.js"></script>
+		<script type="text/javascript" src="script/jquery.stellar.js"></script>
 		<script type="text/javascript" src="script/owl.carousel.js"></script>
 		<script type="text/javascript" src="script/tween.js"></script>
 		<script type="text/javascript" src="script/jquery.smoothScroll.js"></script>

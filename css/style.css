@@ -372,6 +372,8 @@ body {
 }
 .performance-wrap {
   margin-top: 100px;
+  height: 600px;
+  overflow: hidden;
   background: url(../images/performance_bg.png) repeat-x left -210px;
 }
 .performance-wrap h2 {
@@ -383,6 +385,7 @@ body {
 .performance-wrap .item {
   padding: 5px;
   cursor: pointer;
+  margin-bottom: 200px;
 }
 .performance-wrap .item .head {
   border: 1px solid #ccc;
@@ -399,7 +402,6 @@ body {
 .performance-wrap .item .body {
   padding: 1px 15px;
   background-color: #fff;
-  border: 1px solid #ccc;
   border-top: none;
   border-bottom: none;
 }
@@ -437,8 +439,9 @@ body {
   background: url(../images/icon_02.png) no-repeat center center;
 }
 .performance-wrap .item .foot {
+  width: 100%;
+  height: 100px;
   background-color: #fff;
-  border: 1px solid #ccc;
   border-top: none;
   border-radius: 0 0 250px 250px ;
   min-height: 125px;
@@ -455,6 +458,7 @@ body {
 .performance-wrap .item:active .foot {
   border-radius: 0;
   border-bottom-color: #fff;
+  height: 220px;
 }
 .scholarship-wrap {
   width: 100%;
@@ -541,6 +545,7 @@ body {
   border: 1px solid #ddd;
   text-decoration: none;
   position: relative;
+  padding-left: 80px;
 }
 .btn:hover,
 .btn:focus,
@@ -597,7 +602,7 @@ fieldset[disabled] .btn.active {
 }
 .achievement-wrap {
   background: url(../images/achievement_bg_01.jpg) no-repeat;
-  background-size: 100%;
+  background-attachment: fixed;
   padding: 200px 0;
   position: relative;
 }
@@ -720,4 +725,7 @@ fieldset[disabled] .btn.active {
 }
 .footer .col-3 .qr p {
   text-align: center;
+}
+.music-container img {
+  position: fixed;
 }
