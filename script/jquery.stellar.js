@@ -452,7 +452,6 @@
 					stellarRatio: ($this.data('stellar-background-ratio') === undefined ? 1 : $this.data('stellar-background-ratio'))
 				});
 				
-				console.log($this.position().top);
 			});
 		},
 		_reset: function() {

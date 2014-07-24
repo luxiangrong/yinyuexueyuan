@@ -22,6 +22,35 @@ body {
   width: 1000px;
 }
 
+.btn {
+  .transition(all 0.5s) ;
+  .button-variant(#333, #fff, #ddd);
+  .button-size(10px, 50px, 14px, 34px, 5px);
+  border: 1px solid #ddd;
+  text-decoration: none;
+  position: relative;
+  padding-left: 80px;
+  &:hover {
+    background-color: #8f002f;
+    color: #fff;
+    border: 1px solid #8f002f;
+  }
+  .icon {
+    position: absolute;
+    border-right: 1px solid #ddd;
+    left: 0;
+    bottom: 0px;
+    width: 40px;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    margin-right: 1em;
+    background: url(../images/icon_03.png) no-repeat center center;
+  }
+}
+
+
+// 头部
 .header {
   .clearfix();
   margin-top: 10px;
@@ -51,17 +80,35 @@ body {
   }
 }
 
+
+//第一屏banner
 #banner .item img{
     display: block;
     width: 100%;
     height: auto;
 }
 
+
+//第二屏
 .student-wrap{
   margin-top: 50px;
   .item {
     text-align: center;
     padding: 0 50px;
+    .image-switch {
+      width: 130px;
+      height: 130px;
+      display: inline-block;
+      position: relative;
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        &.image-hover {
+          opacity: 0;
+        }
+      }
+    }
     h3 {
       font-size: 18px;
     }
@@ -106,6 +153,8 @@ body {
   }
 }
 
+
+//演出活动
 .performance-wrap {
   margin-top: 100px;
   height: 600px;
@@ -200,15 +249,19 @@ body {
   }
 }
 
+
+//学术活动
 .scholarship-wrap {
   .clearfix();
   width: 100%;
   overflow-x: hidden;
+  margin-bottom: 100px;
   h2 {
     font-size: 24px;
     text-align: center;
     color: #333;
     font-weight: normal;
+    margin: 100px 0 30px;
   }
   .scholarship-items {
     .clearfix();
@@ -254,35 +307,10 @@ body {
   }
 }
 
-.btn {
-  .transition(all 0.5s) ;
-  .button-variant(#333, #fff, #ddd);
-  .button-size(10px, 50px, 14px, 34px, 5px);
-  border: 1px solid #ddd;
-  text-decoration: none;
-  position: relative;
-  padding-left: 80px;
-  &:hover {
-    background-color: #8f002f;
-    color: #fff;
-    border: 1px solid #8f002f;
-  }
-  .icon {
-    position: absolute;
-    border-right: 1px solid #ddd;
-    left: 0;
-    bottom: 0px;
-    width: 40px;
-    height: 100%;
-    display: inline-block;
-    float: left;
-    margin-right: 1em;
-    background: url(../images/icon_03.png) no-repeat center center;
-  }
-}
 
+//成就
 .achievement-wrap {
-  background: url(../images/achievement_bg_01.jpg) no-repeat;
+  background: url(../images/achievement_bg_01.jpg) no-repeat 50% top;
   background-attachment: fixed;
   padding: 200px 0;
   position: relative;
@@ -351,6 +379,8 @@ body {
   }
 }
 
+
+//脚部
 .footer {
   .row {
     .clearfix();
@@ -392,6 +422,7 @@ body {
   
 }
 
+//视察效果
 .music-container {
   img {
     position: fixed;

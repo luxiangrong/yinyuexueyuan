@@ -23,7 +23,7 @@
 					var originItemHeight = $(item).height();
 					$(item).width(originItemWidth * rate);
 					$(item).find('img').width(originItemWidth * (rate + 0.3));
-					$(item).height(originItemHeight * rate);
+					$(item).height(originItemHeight * (rate + 0.3) );
 				});
 
 				$suddenContainer.find('.scholarship-item').each(function(i, item) {
@@ -55,17 +55,54 @@
 		}
 		
 	};
+	
+	var imageSwitch = {
+		init: function(){
+			$('img[data-on]').on('mouseenter', function(){
+				var normalImage = $(this);
+				var hoverImage = new Image();
+				hoverImage.src = $(this).attr('data-on');
+				$(hoverImage).css('opacity', 0);
+				$(this).after(hoverImage);
+				$(this).animate({
+					opacity: 0
+				},{
+					duration: 500
+				});
+				$(hoverImage).animate({
+					opacity: 1
+				},{
+					duration: 500
+				});
+				$(hoverImage).off('mouseleave').on('mouseleave', function(){
+					$(this).animate({
+						opacity: 0
+					},{
+						duration: 500,
+						complete: function() {
+					      $(this).remove();
+					    }
+					});
+					normalImage.animate({
+						opacity: 1
+					},{
+						duration: 500
+					});
+				});
+			});
+		}
+	};
 
 	var $window = $(window);
 
 	var onReady = {
 		init : function() {
-			sudden.init();
+			imageSwitch.init();
 		}
 	};
 
 	//stellar计算高度的时候有bug，这里还需要改进
-	//$(document).ready(onReady.init);
+	$(document).ready(onReady.init);
 
 	$(function() {
 		$(document).ready(function() {
@@ -77,7 +114,6 @@
 				navigation : false, // Show next and prev buttons
 				singleItem : true,
 				transitionStyle : "fade",
-				autoPlay: true,
 				beforeInit: function(){owlCarouselInit=false},
 				afterInit: function(){sudden.init();owlCarouselInit=true},
 			});
@@ -105,7 +141,8 @@
 			function initStellar(){
 				if(owlCarouselInit) {
 					$.stellar({
-						hideDistantElements: true
+						hideDistantElements: true,
+						horizontalScrolling: false
 					});
 					return;
 				}
