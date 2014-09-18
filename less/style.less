@@ -94,7 +94,7 @@ body {
   margin-top: 50px;
   .item {
     text-align: center;
-    padding: 0 50px;
+    padding: 0 30px;
     .image-switch {
       width: 130px;
       height: 130px;
@@ -116,7 +116,20 @@ body {
       font-size: 12px;
       color: #666;
       text-align: left;
+      line-height: 20px;
+      &.extr {
+        text-align: center;
+        line-height: 30px;
+        a {
+          color: #666;
+          text-decoration: none;
+          &:hover {
+            color: #8e002e;
+          }
+        }
+      }
     }
+    
   }
   .owl-theme {
     .owl-controls {
@@ -156,7 +169,7 @@ body {
 
 //演出活动
 .performance-wrap {
-  margin-top: 100px;
+  margin-top: 50px;
   height: 600px;
   overflow:hidden;
   background: url(../images/performance_bg.png) repeat-x left -210px;
@@ -167,6 +180,29 @@ body {
     font-weight: normal;
   }
   .owl-item {
+  }
+  .owl-controls {
+    position: absolute;
+    top: 300px;
+    .owl-pagination {
+      display: none;
+    }
+    .owl-buttons {
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        border: 1px solid rgba(143,0,47,0);
+        &:hover {
+          border: 1px solid #fff;
+        }
+      }
+      .owl-prev {
+        left: -60px;
+      }
+      .owl-next {
+        right: -60px;
+      }
+    }
   }
   .item {
     padding: 5px;
@@ -182,6 +218,7 @@ body {
       img {
         border: 5px solid #ccc;
         border-radius: 235px;
+        transition: all 1s;
       }
     }
     .body {

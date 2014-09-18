@@ -121,7 +121,7 @@
 			$("#student").owlCarousel({
 				navigation : true, // Show next and prev buttons
 				navigationText : ['&nbsp;', '&nbsp;'],
-				items : 3,
+				items : 4,
 				beforeInit: function(){owlCarouselInit=false},
 				afterInit: function(){owlCarouselInit=true},
 			});

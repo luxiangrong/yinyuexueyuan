@@ -389,7 +389,7 @@ fieldset[disabled] .btn.active {
 }
 .student-wrap .item {
   text-align: center;
-  padding: 0 50px;
+  padding: 0 30px;
 }
 .student-wrap .item .image-switch {
   width: 130px;
@@ -412,6 +412,18 @@ fieldset[disabled] .btn.active {
   font-size: 12px;
   color: #666;
   text-align: left;
+  line-height: 20px;
+}
+.student-wrap .item p.extr {
+  text-align: center;
+  line-height: 30px;
+}
+.student-wrap .item p.extr a {
+  color: #666;
+  text-decoration: none;
+}
+.student-wrap .item p.extr a:hover {
+  color: #8e002e;
 }
 .student-wrap .owl-theme .owl-controls {
   margin-top: 30px;
@@ -457,7 +469,7 @@ fieldset[disabled] .btn.active {
   background-image: url(../images/pagination_right_on.png);
 }
 .performance-wrap {
-  margin-top: 100px;
+  margin-top: 50px;
   height: 600px;
   overflow: hidden;
   background: url(../images/performance_bg.png) repeat-x left -210px;
@@ -467,6 +479,28 @@ fieldset[disabled] .btn.active {
   text-align: center;
   color: #333;
   font-weight: normal;
+}
+.performance-wrap .owl-controls {
+  position: absolute;
+  top: 300px;
+}
+.performance-wrap .owl-controls .owl-pagination {
+  display: none;
+}
+.performance-wrap .owl-controls .owl-buttons .owl-prev,
+.performance-wrap .owl-controls .owl-buttons .owl-next {
+  position: absolute;
+  border: 1px solid rgba(143, 0, 47, 0);
+}
+.performance-wrap .owl-controls .owl-buttons .owl-prev:hover,
+.performance-wrap .owl-controls .owl-buttons .owl-next:hover {
+  border: 1px solid #fff;
+}
+.performance-wrap .owl-controls .owl-buttons .owl-prev {
+  left: -60px;
+}
+.performance-wrap .owl-controls .owl-buttons .owl-next {
+  right: -60px;
 }
 .performance-wrap .item {
   padding: 5px;
@@ -484,6 +518,8 @@ fieldset[disabled] .btn.active {
 .performance-wrap .item .head img {
   border: 5px solid #ccc;
   border-radius: 235px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 .performance-wrap .item .body {
   padding: 1px 15px;
