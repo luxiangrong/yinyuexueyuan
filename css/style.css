@@ -425,6 +425,25 @@ fieldset[disabled] .btn.active {
 .student-wrap .item p.extr a:hover {
   color: #8e002e;
 }
+.student-wrap .item ul li {
+  float: left;
+  width: 50%;
+  text-align: left;
+  height: 20px;
+  line-height: 20px;
+}
+.student-wrap .item ul li a {
+  color: #8f002e;
+  margin-left: 5px;
+  text-decoration: none;
+}
+.student-wrap .item ul li i.icon04 {
+  display: inline-block;
+  background: url(../images/icon_04.png) no-repeat left center;
+  width: 13px;
+  height: 13px;
+  vertical-align: middle;
+}
 .student-wrap .owl-theme .owl-controls {
   margin-top: 30px;
   zoom: 1;
